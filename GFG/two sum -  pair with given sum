@@ -1,0 +1,20 @@
+  bool twoSum(vector<int>& arr, int target){
+  
+        
+        sort(arr.begin(), arr.end());
+        int left =0, right =  arr.size()-1;
+        
+        
+        while(left<right){
+            int curr = arr[left]+arr[right];
+            
+            if(curr==target)
+            return true;
+            
+            
+            else if(curr<target)
+            left++;
+            
+            else right--;
+        }
+  }
